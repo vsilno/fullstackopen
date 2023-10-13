@@ -16,7 +16,7 @@ function App() {
     setSelected(randomInteger)
   }
 
-  const handleVote = async (index) => {
+  const handleVote = (index) => {
     const newVote = votes[index] + 1
     setVotes(prevObj => ({...prevObj, [index]: newVote}))
     if (newVote > votes[mostVoted]) setMostVoted(index)
