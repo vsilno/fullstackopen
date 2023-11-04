@@ -1,0 +1,20 @@
+
+.success {
+    width: fit-content;
+    font-size: 20px;
+    color: green;
+    border: 1px solid green;
+    margin-bottom: 20px;
+    padding: 1em;
+    text-align: center;
+}
+
+.error {
+    width: fit-content;
+    font-size: 20px;
+    color: red;
+    border: 1px solid red;
+    margin-bottom: 20px;
+    padding: 1em;
+    text-align: center;
+}
