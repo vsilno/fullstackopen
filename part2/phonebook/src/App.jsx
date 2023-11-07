@@ -32,7 +32,9 @@ const App = () => {
             message: `${newName} has been updated successfully !`,
             type: 'success'
           })
-        }).catch((e) => {
+        })
+        .catch(() => {
+          
           showNotification({
             message: `${newName} was not found. Please try again.`,
             type: 'error'
@@ -54,6 +56,12 @@ const App = () => {
             type: 'success'
           })
         })
+        .catch(e => {
+          showNotification({
+            message: `${e.response.data.error}`,
+            type: 'error'
+          })
+        })
       setNewName('')
       setNewNumber('')
     } else {
@@ -67,7 +75,7 @@ const App = () => {
       .then(() => {
         const newArray = persons.filter((p) => p.id !== person.id)
         setPersons(newArray)
-      }).catch((e) => {
+      }).catch(() => {
         showNotification({
           message: `${person.name} was not found. Please try again.`,
           type: 'error'
